@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import App from 'App';
 import reportWebVitals from 'reportWebVitals';
 import store from 'store/store';
+import Styled from 'assets/styles/DefaultStyles';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
@@ -11,6 +12,7 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+      <Styled.DefaultStyles />
       <App />
     </Provider>
   </React.StrictMode>
