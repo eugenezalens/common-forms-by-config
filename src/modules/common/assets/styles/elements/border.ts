@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { EBorderColor, EThemeColor } from 'assets/styles/colors';
+import { EBorderColor, EThemeColor } from 'modules/common/assets/styles/colors';
 
 const defaultStatic = css`
   box-shadow: 0 0 0 1px ${EBorderColor.DefaultStatic};

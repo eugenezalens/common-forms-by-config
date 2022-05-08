@@ -1,5 +1,5 @@
-import { EBackgroundColor, EThemeColor } from 'assets/styles/colors';
-import border from 'assets/styles/elements/border';
+import { EBackgroundColor, EThemeColor } from 'modules/common/assets/styles/colors';
+import border from 'modules/common/assets/styles/elements/border';
 import styled, { css, FlattenSimpleInterpolation } from 'styled-components';
 
 const Label = styled.div`

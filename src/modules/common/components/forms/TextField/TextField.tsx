@@ -1,7 +1,7 @@
 import { ChangeEvent, forwardRef, memo, useMemo } from 'react';
-import Styled from 'components/forms/TextField/TextField.styles';
-import { TTextFiledProps, TTextFiledState } from 'components/forms/TextField/TextField.types';
-import { useCommonState } from 'hooks';
+import Styled from 'modules/common/components/forms/TextField/TextField.styles';
+import { TTextFiledProps, TTextFiledState } from 'modules/common/components/forms/TextField/TextField.types';
+import { useCommonState } from 'modules/common/hooks';
 
 const TextField = forwardRef<HTMLInputElement, TTextFiledProps>(
   ({ isRequired, onChange, type, value = '', placeholder = '', label = '' }, inputRef) => {
