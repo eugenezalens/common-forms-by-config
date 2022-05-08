@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-type THandleChangeState<T extends Record<string, any>> = (value: Partial<T>) => void;
+type THandleChangeState<T extends Record<keyof T, T[keyof T]>> = (value: Partial<T>) => void;
 
 const useCommonState = <T extends Record<keyof T, T[keyof T]>>(initialState: T): [T, THandleChangeState<T>] => {
   const [state, setState] = useState<T>(initialState);
