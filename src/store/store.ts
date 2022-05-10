@@ -1,13 +1,18 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { configureStore, ThunkAction, Action, PayloadAction } from '@reduxjs/toolkit';
+import { formsSlice } from 'modules/common/store';
+import { WritableDraft } from 'immer/dist/internal';
 
 const store = configureStore({
-  reducer: {},
+  reducer: {
+    forms: formsSlice,
+  },
 });
 
-type TTypedDispatch = typeof store.dispatch;
+type TDispatch = typeof store.dispatch;
 type TRootState = ReturnType<typeof store.getState>;
-type TTypedThunk<ReturnType = void> = ThunkAction<ReturnType, TRootState, unknown, Action<string>>;
+type TThunk<ReturnType = void> = ThunkAction<ReturnType, TRootState, unknown, Action<string>>;
+type TAction<S, P = void> = (state: WritableDraft<S>, action?: PayloadAction<P>) => void;
 
-export type { TTypedDispatch, TRootState, TTypedThunk };
+export type { TDispatch, TRootState, TThunk, TAction };
 
 export default store;

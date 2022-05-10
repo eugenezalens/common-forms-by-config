@@ -6,6 +6,7 @@ import reportWebVitals from 'reportWebVitals';
 import store from 'store/store';
 import Styled from 'modules/common/assets/styles/DefaultStyles';
 
+// eslint-disable-next-line
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
