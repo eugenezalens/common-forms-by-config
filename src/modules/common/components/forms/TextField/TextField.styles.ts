@@ -18,7 +18,7 @@ const Input = styled.input`
 const changeInnerWrapperIfInputIsFocused = (isInputFocused: boolean): FlattenSimpleInterpolation => {
   if (isInputFocused) {
     return css`
-      ${border.defaultActive}
+      ${border.defaultInputActive}
 
       & ${Label} {
         color: ${EThemeColor.PrimaryStatic};
@@ -26,7 +26,7 @@ const changeInnerWrapperIfInputIsFocused = (isInputFocused: boolean): FlattenSim
     `;
   } else {
     return css`
-      ${border.defaultStatic}
+      ${border.defaultInputStatic}
     `;
   }
 };

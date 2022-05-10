@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
-import { TTypedDispatch } from 'store/store';
+import { TDispatch } from 'store/store';
 
-const useTypedDispatch = () => useDispatch<TTypedDispatch>();
+const useTypedDispatch = () => useDispatch<TDispatch>();
 
 export default useTypedDispatch;
